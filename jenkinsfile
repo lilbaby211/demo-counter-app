@@ -7,5 +7,10 @@ pipeline {
                 steps{
                     git branch: 'main', credentialsId: '06cff486-84a6-45c9-9bfb-c33c84c7b4d5', url: 'https://github.com/lilbaby211/demo-counter-app'
                 }
+            stage{'UNIT Testing'}{
+                steps{
+                    sh 'mvn test'
+                }
+            }
         }
     }
